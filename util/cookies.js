@@ -425,6 +425,16 @@ export class FundoCookies {
     }
 
     /**
+     * Checks if consent was given for a specific category.
+     * @param {string} category - The category to check.
+     * @returns {boolean} True if consent was given, false otherwise.
+     */
+    isConsentGivenForCategory(category) {
+        const consentSettings = this.getConsentSettings();
+        return consentSettings[category] === "true";
+    }
+
+    /**
      * Gets the cookie categories from a cookie.
      * @returns {Object} The cookie categories.
      */
