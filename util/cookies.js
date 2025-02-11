@@ -114,7 +114,6 @@ export class FundoCookies {
         this.cookieConsentNotification = false;
         this.consentSettings = this.getConsentSettings();
         this.cookieCategories = this.getCookieCategories();
-        this.cookiejar = [];
 
         window.showCookieConsentNotification = this.showCookieConsentNotification.bind(this);
 
@@ -473,6 +472,24 @@ export class FundoCookies {
     }
 
     /**
+     * Processes and stores a cookie with the given parameters.
+     * 
+     * @param {string} name - The name of the cookie.
+     * @param {string} value - The value of the cookie.
+     * @param {string} expirationdate - The expiration date of the cookie.
+     * @param {string} category - The category of the cookie.
+     * @param {boolean} rolling - Whether the cookie should have a rolling expiration.
+     */
+    processCookie(name, value, expirationdate, category, rolling) {
+        this.storeCookie(name, value, expirationdate);
+        this.cookieCategories[name] = category;
+        this.storeCookieCategories(this.cookieCategories);
+        if (rolling) {
+            this.addRollingExpirationCookie(name);
+        }
+    }
+
+    /**
      * Sets a cookie.
      * @param {string} name - The name of the cookie.
      * @param {string} [value="true"] - The value of the cookie.
@@ -494,35 +511,15 @@ export class FundoCookies {
                 return;
             }
 
-            if (category === "necessary") {
-                this.storeCookie(name, value, expirationdate);
-                this.cookieCategories[name] = category;
-                this.storeCookieCategories(this.cookieCategories);
-                if (rolling) {
-                    this.addRollingExpirationCookie(name);
-                }
-                resolve();
-                return;
-            }
-            if (this.isCategoryAllowed(category)) {
-                this.storeCookie(name, value, expirationdate);
-                this.cookieCategories[name] = category;
-                this.storeCookieCategories(this.cookieCategories);
-                if (rolling) {
-                    this.addRollingExpirationCookie(name);
-                }
+            if (category === "necessary" || this.isCategoryAllowed(category)) {
+                this.processCookie(name, value, expirationdate, category, rolling);
                 resolve();
                 return;
             }
 
             this.showCookieConsentNotification().then(() => {
                 if (this.isCategoryAllowed(category)) {
-                    this.storeCookie(name, value, expirationdate);
-                    this.cookieCategories[name] = category;
-                    this.storeCookieCategories(this.cookieCategories);
-                    if (rolling) {
-                        this.addRollingExpirationCookie(name);
-                    }
+                    this.processCookie(name, value, expirationdate, category, rolling);
                     resolve();
                 } else {
                     console.error(`Error: User did not allow cookies for category "${category}".`);
