@@ -425,10 +425,22 @@ textarea:hover {
 }
 
 input[type="radio"]:hover,
-select:hover,
-button:hover,
-.button:hover {
+select:hover {
     cursor: pointer;
+}
+
+input[type="email"]:disabled,
+input[type="number"]:disabled,
+input[type="search"]:disabled,
+input[type="text"]:disabled,
+input[type="tel"]:disabled,
+input[type="url"]:disabled,
+input[type="password"]:disabled,
+textarea:disabled,
+input[type="radio"]:disabled,
+select:disabled {
+    background-color: var(--darkWhite);
+    opacity: .7;
 }
 
 input[type="email"]:disabled:hover,
@@ -440,10 +452,9 @@ input[type="url"]:disabled:hover,
 input[type="password"]:disabled:hover,
 textarea:disabled:hover,
 input[type="radio"]:disabled:hover,
-select:disabled:hover,
-button:disabled:hover,
-.button:disabled:hover {
+select:disabled:hover {
     cursor: default;
+    background-color: var(--darkWhite);
 }
 
 input[type="email"]:focus,
