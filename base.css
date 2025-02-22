@@ -215,6 +215,7 @@ input[type="button"]:hover {
     color: var(--darkBlack);
     border-color: var(--darkBlack);
     background-color: var(--darkWhite);
+    cursor: pointer;
 }
 
 .button:focus,
@@ -244,6 +245,14 @@ input[type="button"]:disabled {
     color: var(--lighterGray);
     border-color: var(--lighterGray);
     background-color: var(--white);
+}
+
+.button:disabled:hover,
+button:disabled:hover,
+input[type="submit"]:disabled:hover,
+input[type="reset"]:disabled:hover,
+input[type="button"]:disabled:hover {
+    cursor: default;
 }
 
 .button:disabled:active,
@@ -402,6 +411,39 @@ input[type="password"]:hover,
 textarea:hover,
 select:hover {
     background-color: var(--darkerWhite);
+}
+
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="search"]:hover,
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="url"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+    cursor: text;
+}
+
+input[type="radio"]:hover,
+select:hover,
+button:hover,
+.button:hover {
+    cursor: pointer;
+}
+
+input[type="email"]:disabled:hover,
+input[type="number"]:disabled:hover,
+input[type="search"]:disabled:hover,
+input[type="text"]:disabled:hover,
+input[type="tel"]:disabled:hover,
+input[type="url"]:disabled:hover,
+input[type="password"]:disabled:hover,
+textarea:disabled:hover,
+input[type="radio"]:disabled:hover,
+select:disabled:hover,
+button:disabled:hover,
+.button:disabled:hover {
+    cursor: default;
 }
 
 input[type="email"]:focus,
