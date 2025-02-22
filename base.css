@@ -357,6 +357,7 @@ img {
 
 label {
     display: inline-block;
+    margin: .4rem;
 }
 
 input {
