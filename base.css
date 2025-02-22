@@ -479,6 +479,7 @@ fieldset {}
 input[type="checkbox"],
 input[type="radio"] {
     display: inline;
+    margin-left: .4rem;
 }
 
 textarea {
