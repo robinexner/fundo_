@@ -292,13 +292,8 @@ input[type="submit"].button--highlighted:active {
 
 .button--highlighted:disabled,
 input[type="submit"].button--highlighted:disabled {
-    /*
     color: var(--white);
-    border-color: var(--darkerWhite);
-    background-color: var(--darkerWhite);
-    */
-    color: var(--white);
-    border-color: var(--white);
+    border-color: var(--lighterGray);
     background-color: var(--lighterGray);
 }
 
