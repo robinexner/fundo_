@@ -158,15 +158,6 @@ h6 {
     margin-top: .5em;
 }
 
-h1:not(:first-child),
-h2:not(:first-child),
-h3:not(:first-child),
-h4:not(:first-child),
-h5:not(:first-child),
-h6:not(:first-child) {
-    margin-top: .5em;
-}
-
 p {
     margin-top: 0;
 }
@@ -224,6 +215,7 @@ input[type="button"]:hover {
     color: var(--darkBlack);
     border-color: var(--darkBlack);
     background-color: var(--darkWhite);
+    cursor: pointer;
 }
 
 .button:focus,
@@ -253,6 +245,14 @@ input[type="button"]:disabled {
     color: var(--lighterGray);
     border-color: var(--lighterGray);
     background-color: var(--white);
+}
+
+.button:disabled:hover,
+button:disabled:hover,
+input[type="submit"]:disabled:hover,
+input[type="reset"]:disabled:hover,
+input[type="button"]:disabled:hover {
+    cursor: default;
 }
 
 .button:disabled:active,
@@ -352,6 +352,7 @@ img {
 
 label {
     display: inline-block;
+    margin: .4rem;
 }
 
 input {
@@ -377,6 +378,7 @@ select {
     border: 1px solid transparent;
     background-color: var(--darkWhite);
     outline: .3em solid transparent;
+    margin: .4em;
 }
 
 
@@ -405,6 +407,50 @@ input[type="password"]:hover,
 textarea:hover,
 select:hover {
     background-color: var(--darkerWhite);
+}
+
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="search"]:hover,
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="url"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+    cursor: text;
+}
+
+input[type="radio"]:hover,
+select:hover {
+    cursor: pointer;
+}
+
+input[type="email"]:disabled,
+input[type="number"]:disabled,
+input[type="search"]:disabled,
+input[type="text"]:disabled,
+input[type="tel"]:disabled,
+input[type="url"]:disabled,
+input[type="password"]:disabled,
+textarea:disabled,
+input[type="radio"]:disabled,
+select:disabled {
+    background-color: var(--darkWhite);
+    opacity: .7;
+}
+
+input[type="email"]:disabled:hover,
+input[type="number"]:disabled:hover,
+input[type="search"]:disabled:hover,
+input[type="text"]:disabled:hover,
+input[type="tel"]:disabled:hover,
+input[type="url"]:disabled:hover,
+input[type="password"]:disabled:hover,
+textarea:disabled:hover,
+input[type="radio"]:disabled:hover,
+select:disabled:hover {
+    cursor: default;
+    background-color: var(--darkWhite);
 }
 
 input[type="email"]:focus,
@@ -450,26 +496,6 @@ form label {
     display: block;
     width: 35em;
     max-width: 100%;
-}
-
-form input[type="email"],
-form input[type="number"],
-form input[type="search"],
-form input[type="text"],
-form input[type="tel"],
-form input[type="url"],
-form input[type="password"],
-form textarea,
-form select {
-    margin-top: .2em;
-}
-
-form textarea {
-    height: 13em;
-}
-
-form label {
-    margin-bottom: 1em;
 }
 
 
