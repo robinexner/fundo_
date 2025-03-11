@@ -6,7 +6,7 @@
  * See the LICENSE file for more information.
  */
 
-:root {
+ :root {
     /* 
     * Grayscale
     */
@@ -154,11 +154,12 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0em;
-    margin-top: .5em;
+    margin: .4rem;
+    margin-bottom: .5em;
 }
 
 p {
+    margin: .4rem;
     margin-top: 0;
 }
 
@@ -198,7 +199,7 @@ input[type="button"] {
     outline: 0;
     cursor: pointer;
     box-sizing: border-box;
-    margin: .4em;
+    margin: .4rem;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -378,7 +379,7 @@ select {
     border: 1px solid transparent;
     background-color: var(--darkWhite);
     outline: .3em solid transparent;
-    margin: .4em;
+    margin: .4rem;
 }
 
 
