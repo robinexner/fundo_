@@ -8,79 +8,19 @@
 
  :root {
     /* 
-    * Grayscale
+    * grayscale
     */
-    --lighterWhite: #fffffe;
-    --lightWhite: #fefdf8;
-    --white: #fbf9f0;
-    --darkWhite: #e9e7df;
-    --darkerWhite: #dad9d1;
-    --lighterGray: #d6d5ce;
-    --lightGray: #c3c3bd;
-    --gray: #b0b0ab;
-    --darkGray: #9e9e9a;
-    --darkerGray: #8b8b89;
-    --lighterBlack: #656666;
-    --lightBlack: #3f4144;
-    --black: #1a1c22;
-    --darkBlack: #131418;
-    --darkerBlack: #0c0c0e;
-    /* 
-    * Red
-    */
-    --red000: #140401;
-    --red100: #2d0802;
-    --red200: #450c03;
-    --red300: #5b170c;
-    --red400: #712215;
-    --red500: #872c1e;
-    --red600: #ab4533;
-    --red700: #cf5e49;
-    --red800: #f2765e;
-    --red900: #ffa18f;
-    --red1000: #f9bdb1;
-    /* 
-    * Orange
-    */
-    --orange000: #0d0703;
-    --orange100: #1a0f08;
-    --orange200: #25160e;
-    --orange300: #592e18;
-    --orange400: #8e4623;
-    --orange500: #c25d2d;
-    --orange600: #d0825b;
-    --orange700: #e0a88b;
-    --orange800: #f0cdba;
-    --orange900: #f6dccd;
-    --orange1000: #fce9df;
-    /* 
-    * Yellow
-    */
-    --yellow000: #171503;
-    --yellow100: #3f3b13;
-    --yellow200: #686122;
-    --yellow300: #908731;
-    --yellow400: #b9ae41;
-    --yellow500: #e1d44f;
-    --yellow600: #e6da5c;
-    --yellow700: #ece169;
-    --yellow800: #f2e777;
-    --yellow900: #fdf493;
-    --yellow1000: #fefbdc;
-    /* 
-    * Green
-    */
-    --green000: #06140a;
-    --green100: #0a1e0f;
-    --green200: #123017;
-    --green300: #224429;
-    --green400: #33583b;
-    --green500: #436c4c;
-    --green600: #5e854b;
-    --green700: #789e4b;
-    --green800: #93b64b;
-    --green900: #aed165;
-    --green1000: #d2ed98;
+    --grayscale000: #000000;
+    --grayscale100: #040404;
+    --grayscale200: #070707;
+    --grayscale300: #292929;
+    --grayscale400: #5c5c5c;
+    --grayscale500: #8f8f8f;
+    --grayscale600: #adadad;
+    --grayscale700: #dbdbdb;
+    --grayscale800: #f1f1f1;
+    --grayscale900: #f7f7f7;
+    --grayscale1000: #ffffff;
     /* 
     * Blue
     */
@@ -95,20 +35,6 @@
     --blue800: #66bfe7;
     --blue900: #83d0f3;
     --blue1000: #a0e1ff;
-    /* 
-    * Purple
-    */
-    --purple000: #0b0112;
-    --purple100: #1a052d;
-    --purple200: #290947;
-    --purple300: #431858;
-    --purple400: #5d266a;
-    --purple500: #77347b;
-    --purple600: #9457a1;
-    --purple700: #b37bc7;
-    --purple800: #d19feb;
-    --purple900: #e0bdf2;
-    --purple1000: #eedcf9;
 }
 
 html {
@@ -124,8 +50,8 @@ body {
     line-height: 1.6;
     font-weight: 400;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--grayscale200);
+    background-color: var(--grayscale1000);
     margin: 0;
     padding: 0;
 }
@@ -145,7 +71,7 @@ hr {
     margin-top: 1em;
     margin-bottom: 1em;
     border-width: 0;
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--grayscale200);
 }
 
 h1,
@@ -190,12 +116,12 @@ input[type="button"] {
     font-size: 1em;
     display: inline-block;
     padding: .5em;
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--grayscale200);
+    background-color: var(--grayscale1000);
     text-align: center;
     font-weight: 600;
     border-radius: .3em;
-    border: .13em solid var(--black);
+    border: .13em solid var(--grayscale200);
     outline: 0;
     cursor: pointer;
     box-sizing: border-box;
@@ -213,9 +139,9 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-    color: var(--darkBlack);
-    border-color: var(--darkBlack);
-    background-color: var(--darkWhite);
+    color: var(--grayscale100);
+    border-color: var(--grayscale100);
+    background-color: var(--grayscale900);
     cursor: pointer;
 }
 
@@ -224,7 +150,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-    outline: .3em solid var(--darkerWhite);
+    outline: .3em solid var(--grayscale800);
 }
 
 .button:active,
@@ -233,9 +159,9 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
     transform: translateY(.1em);
-    color: var(--darkerBlack);
-    border-color: var(--darkerBlack);
-    background-color: var(--darkerWhite);
+    color: var(--grayscale000);
+    border-color: var(--grayscale000);
+    background-color: var(--grayscale800);
 }
 
 .button:disabled,
@@ -243,9 +169,9 @@ button:disabled,
 input[type="submit"]:disabled,
 input[type="reset"]:disabled,
 input[type="button"]:disabled {
-    color: var(--lighterGray);
-    border-color: var(--lighterGray);
-    background-color: var(--white);
+    color: var(--grayscale600);
+    border-color: var(--grayscale600);
+    background-color: var(--grayscale1000);
 }
 
 .button:disabled:hover,
@@ -266,36 +192,36 @@ input[type="button"]:disabled:active {
 
 .button--highlighted,
 input[type="submit"].button--highlighted {
-    color: var(--white);
-    background-color: var(--black);
-    border-color: var(--black);
+    color: var(--grayscale1000);
+    background-color: var(--grayscale200);
+    border-color: var(--grayscale200);
 }
 
 .button--highlighted:hover,
 input[type="submit"].button--highlighted:hover {
-    color: var(--darkWhite);
-    background-color: var(--darkerBlack);
-    border-color: var(--darkBlack);
+    color: var(--grayscale900);
+    background-color: var(--grayscale000);
+    border-color: var(--grayscale100);
     outline: 0;
 }
 
 .button--highlighted:focus,
 input[type="submit"].button--highlighted:focus {
-    outline: .3em solid var(--darkerWhite);
+    outline: .3em solid var(--grayscale800);
 }
 
 .button--highlighted:active,
 input[type="submit"].button--highlighted:active {
-    color: var(--darkerWhite);
-    border-color: var(--darkerBlack);
-    background-color: var(--darkerBlack);
+    color: var(--grayscale800);
+    border-color: var(--grayscale000);
+    background-color: var(--grayscale000);
 }
 
 .button--highlighted:disabled,
 input[type="submit"].button--highlighted:disabled {
-    color: var(--white);
-    border-color: var(--lighterGray);
-    background-color: var(--lighterGray);
+    color: var(--grayscale1000);
+    border-color: var(--grayscale600);
+    background-color: var(--grayscale600);
 }
 
 a.button {
@@ -311,21 +237,17 @@ img {
 /* Util */
 
 .darkmode {
-    --lighterGray: #d6d5ce;
-    --lightGray: #c3c3bd;
-    --gray: #b0b0ab;
-    --darkGray: #9e9e9a;
-    --darkerGray: #8b8b89;
-    --lighterBlack: #fffffe;
-    --lightBlack: #fefdf8;
-    --black: #fbf9f0;
-    --darkBlack: #e9e7df;
-    --darkerBlack: #dad9d1;
-    --lighterWhite: #656666;
-    --lightWhite: #3f4144;
-    --white: #1a1c22;
-    --darkWhite: #131418;
-    --darkerWhite: #111216;
+    --grayscale1000: #000000;
+    --grayscale900: #040404;
+    --grayscale800: #070707;
+    --grayscale700: #292929;
+    --grayscale600: #5c5c5c;
+    --grayscale500: #8f8f8f;
+    --grayscale400: #adadad;
+    --grayscale300: #dbdbdb;
+    --grayscale200: #f1f1f1;
+    --grayscale100: #f7f7f7;
+    --grayscale000: #ffffff;
 }
 
 .darkmode .link,
@@ -375,9 +297,9 @@ select {
     border: 0;
     border-radius: .3em;
     box-shadow: none;
-    color: var(--black);
-    border: 1px solid transparent;
-    background-color: var(--darkWhite);
+    color: var(--grayscale200);
+    border: 1px solid var(--grayscale700);
+    background-color: var(--grayscale900);
     outline: .3em solid transparent;
     margin: .4rem;
 }
@@ -407,7 +329,7 @@ input[type="url"]:hover,
 input[type="password"]:hover,
 textarea:hover,
 select:hover {
-    background-color: var(--darkerWhite);
+    background-color: var(--grayscale800);
 }
 
 input[type="email"]:hover,
@@ -436,7 +358,7 @@ input[type="password"]:disabled,
 textarea:disabled,
 input[type="radio"]:disabled,
 select:disabled {
-    background-color: var(--darkWhite);
+    background-color: var(--grayscale900);
     opacity: .7;
 }
 
@@ -451,7 +373,7 @@ textarea:disabled:hover,
 input[type="radio"]:disabled:hover,
 select:disabled:hover {
     cursor: default;
-    background-color: var(--darkWhite);
+    background-color: var(--grayscale900);
 }
 
 input[type="email"]:focus,
@@ -463,8 +385,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    outline: .3em solid var(--darkerWhite);
-    background-color: var(--darkWhite);
+    outline: .3em solid var(--grayscale800);
+    background-color: var(--grayscale900);
 }
 
 legend {
@@ -511,11 +433,11 @@ th,
 td {
     padding: .5rem;
     text-align: left;
-    border-bottom: 1px solid var(--gray);
+    border-bottom: 1px solid var(--grayscale500);
 }
 
 th {
-    background-color: var(--darkWhite);
+    background-color: var(--grayscale900);
 }
 
 th:first-child,
