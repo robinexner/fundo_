@@ -38,11 +38,7 @@
 }
 
 html {
-    /*font-size: 12pt;*/
-    /*font-size: lamp(1rem, 2vw, 3rem);
-    font-size: clamp(11pt, 1vh, 16pt);
-    font-size: clamp(11pt, 1.3vh, 16pt);
-    */
+    /* font-size: clamp(11pt, 1.3vh, 16pt); */
     font-size: clamp(11pt, .9vw, 13pt);
 }
 
@@ -113,12 +109,14 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    font-size: 1em;
     display: inline-block;
-    padding: .5em;
+    padding: .3em;
+    padding-left: .7em;
+    padding-right: .7em;
     color: var(--grayscale200);
     background-color: var(--grayscale1000);
     text-align: center;
+    line-height: inherit;
     font-weight: 600;
     border-radius: .3em;
     border: .13em solid var(--grayscale200);
@@ -359,6 +357,7 @@ textarea:disabled,
 input[type="radio"]:disabled,
 select:disabled {
     background-color: var(--grayscale900);
+    border: 1px solid var(--grayscale800);
     opacity: .7;
 }
 
